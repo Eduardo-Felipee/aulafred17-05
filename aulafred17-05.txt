@@ -1,0 +1,84 @@
+--use master;
+--create function F_Somar (@Num1 int, @Num2 int)
+--		returns int
+--as
+--	begin 
+--		declare @Soma int
+--		set @Soma = @Num1 + @Num2
+--		return(@Soma)
+--		end;
+
+--select dbo.F_Somar(85,2);
+
+--create function F_Tabela ()
+--		returns table
+--as
+--		return(select * from cadfun);
+		--select * from F_Tabela();
+--		CREATE FUNCTION dbo.CalcularSituacaoAluno (@Nota1 FLOAT, @Nota2 FLOAT, @Nota3 FLOAT)
+--RETURNS VARCHAR(20)
+--AS
+--BEGIN
+--    DECLARE @Media FLOAT;
+--    DECLARE @Situacao VARCHAR(20);
+
+      
+--    SET @Media = (@Nota1 + @Nota2 + @Nota3) / 3;
+
+    
+--    IF @Media < 5
+--        SET @Situacao = 'reprovado';
+--    ELSE IF @Media >= 5 AND @Media < 7
+--        SET @Situacao = 'recuperação';
+--    ELSE
+--        SET @Situacao = 'aprovado';
+
+   
+--    RETURN @Situacao;
+--END;
+--SELECT dbo.CalcularSituacaoAluno(5, 7, 9) AS Situacao;
+ 
+ --create table Alunos(Nome varchar(30), nota1 int, nota2 int, nota3 int);
+ --insert into Alunos(Nome, nota1, nota2, nota3)
+ --values 
+	--	('Pedro', 2, 7,     4),
+	--	('Carlos', 4, 9,    6),
+	--	('Ana', 6, 1,       8),
+	--	('Paulo', 8, 3,    10),
+	--	('Maria', 10, 5,    9),
+	--	('José', 1, 7,      8),
+	--	('João', 3, 9,      7),
+	--	('Cristina', 5, 2,  6);
+
+	--select * from Alunos;
+	--select nome as 'NOME',
+	--	   nota1 as 'NOTA1',
+	--	   nota2 as 'NOTA2',
+	--	   nota3 as 'NOTA3',
+	--	   cast((nota1+nota2+nota3)/3 as decimal(3,1) as 'MÉDIA', 
+	--	   dbo.F_Situacao(nota1,nota2,nota3) as 'SITUAÇÃO' 
+	--	   From Alunos
+
+	--create view Vcadfun
+	--as
+	--select nome, funcao from cadfun;
+
+	--select * from Vcadfun;
+
+	--create table #Agenda (Telefone char(10),
+	--					  Nome varchar(50));
+
+	--insert into #Agenda
+	--values 
+	--	   ('1234-5678', 'Pedro'),
+	--	   ('2345-6789', 'Paulo'),
+	--	   ('3456-7890', 'Mário');
+
+	--select * from #Agenda;
+
+
+
+
+
+
+	
